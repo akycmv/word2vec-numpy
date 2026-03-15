@@ -1,0 +1,8 @@
+.DS_*
+
+loss.bin
+W_in.npy
+W_out.npy
+vocab.pkl
+
+__pycache__

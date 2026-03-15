@@ -60,4 +60,15 @@ with open("vocab.pkl", "rb") as f:
     ct = vocab["ct"]
 
 w2v = Word2VecEval(W_in, words, idxs)
-show(w2v.analogy("cars", "car", "tree"))
+
+# tests for
+# epochs=5, lr=0.025, dim=200, window=7, neg_k=15
+
+# gives thames 0.4653, england 0.4615
+show(w2v.analogy("france", "paris", "london"))
+print()
+# gives netherlands 0.5915, holland 0.4856
+show(w2v.analogy("germany", "berlin", "amsterdam"))
+print()
+# gives wife 0.4952, married 0.4919 - interesting!
+show(w2v.analogy("son", "man", "woman"))
